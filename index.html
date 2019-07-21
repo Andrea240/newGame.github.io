@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript1</title>
+</head>
+<body>
+    <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    @font-face { 
+  font-family: 'a_LCDNova'; 
+  src: url('fonts/a_lcdnova_[allfont.ru].ttf'); 
+}
+    body {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: block;
+    }
+    html {
+        background:linear-gradient(240deg, #002cff, #d1ff00);
+        background-size: 400% 400%;;
+        height: 100%;
+        -webkit-animation: AnimationName 8s ease infinite;
+        -moz-animation: AnimationName 8s ease infinite;
+        -o-animation: AnimationName 8s ease infinite;
+        animation: AnimationName 8s ease infinite;
+    }
+    @-webkit-keyframes AnimationName {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+
+    .block {
+        width: 425px;
+        background: white;
+        border-radius: 10px;
+        height: 500px;
+        position: relative;
+        margin: 0px auto;
+        margin-top: 60px;
+    }
+    .time_result {
+        padding: 3px;
+        font-family: 'a_LCDNova', arial;
+        font-size: 13px;
+        color: cyan;
+    }
+    .result_str {
+        width: 250px;
+        margin: 25px auto;
+        height: 65px;
+        border: 1px solid cyan;
+        border-radius: 3px;
+    }
+    .result_string {
+        font-family: 'a_LCDNova', arial;
+        font-size: 17px;
+        color: black;
+        text-align: center;
+        padding-top: 7px;
+    }
+    .time_header {
+        display: flex;
+        font-family: 'a_LCDNova', arial;
+        font-size: 17px;
+        color: black;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .time_world {
+        font-family: 'a_LCDNova', arial;
+        color: red;
+        font-size: 35px;
+    }
+    #time {
+        font-family: 'a_LCDNova', arial;
+        font-size: 35px;
+        color: blue;
+    }
+    h1 {
+        margin: 30px 0px 20px 0px;
+        text-align: center;
+    }
+    .grey {
+        background: grey;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0px auto;
+        position: relative;
+    }
+    button {
+        width: 100px;
+        background: linear-gradient(65deg, blue, cyan);
+        border: none;
+        border-radius: 0px 50px;
+        height: 50px;
+        z-index: 1;
+        left: 170px;
+        bottom: 240px;
+        display: block;
+        position: absolute;
+    }
+    label {
+        margin: 0px auto;
+        padding-bottom: 10px;
+    }
+    .input {
+        text-align: center;
+        padding-top: 30px;
+        margin: 0px auto;
+    }
+    input {
+        background: linear-gradient(65deg, blue, cyan);
+        width: 120px;
+        text-align: center;
+        border: none;
+        height: 40px;
+    }
+        button:active, button:focus {
+            outline: none;
+    }   
+        input:active, 
+        input:focus {
+            outline: none;
+    }
+    button:active {
+        box-shadow:-10px 15px 15px 3px rgba(40,71,251,0.9);
+        -webkit-box-shadow:-10px 15px 15px 3px rgba(40,71,251,0.9);
+        -moz-box-shadow:-10px 15px 15px 3px rgba(40,71,251,0.9);
+    }
+    .none {
+        display: none!important;
+    }
+    .big_block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+    }
+    .result_block {
+        background: blue;
+        width: 295px;
+        border: 3px solid cyan;
+        box-sizing: border-box;
+        height: 500px;
+        border-radius: 5px;
+        margin-left: 20px;
+        margin-top: 60px;
+    }
+    input {
+        font-family: 'a_LCDNova', arial;
+    }
+    </style>
+    <div class="time_world"></div>
+    <div class="big_block">
+        <div class="result_block">
+            <div class="result_str">    
+                <p class="time_result"></p>
+                <p class="result_string"></p>
+            </div>
+        </div>
+    <div class="block">
+        <div class="time_header">
+            <h1 id="text">Время (сек): </h1><h1 id="time"> 5.0</h1>
+        </div>
+        <div class="grey">
+        </div>
+        <button id="start">Начать</button>
+        <div class="input">
+            <label for="a1">Время игры (сек.)</label>
+            <br>
+            <input type="number" value="5">
+        </div>
+    </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
